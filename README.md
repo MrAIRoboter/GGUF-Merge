@@ -8,7 +8,7 @@ As known, [Hugging Face](https://huggingface.co/) splits large files. This progr
 
 ## Example Usage
 
-Assuming your executable is named `GGUF Merge.exe` and you have a 'gguf-split-' file named `goliath-120b.Q5_K_M.gguf-split-a`, you can use the following command in the command prompt (cmd):
+Assuming your executable is named `GGUF Merge.exe` and you have a 'gguf-split-' file named `leviathan-720b.Q5_K_M.gguf-split-a`, you can use the following command in the command prompt (cmd):
 
 ```bash
 "GGUF Merge.exe" leviathan-720b.Q5_K_M.gguf-split-a
