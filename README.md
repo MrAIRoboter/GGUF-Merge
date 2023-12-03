@@ -6,6 +6,29 @@ As known, [Hugging Face](https://huggingface.co/) splits large files. This progr
 
 **GGUF Merge** is a C# project built with Visual Studio specifically designed for merging '.gguf-split-' files into a unified '.gguf' file. This project requires [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
+## Usage
+
+### Method 1: Drag and Drop
+
+1. Open File Explorer and locate any 'gguf-split-' file you want to merge.
+2. Drag the selected 'gguf-split-' file onto the program's executable file and wait for the process to complete.
+
+### Method 2: Command Line Usage (CMD)
+
+1. Open the Command Prompt (CMD).
+2. Navigate to the directory containing the program's executable file.
+3. Run the program with the specified 'gguf-split-' file as a command line argument. For example:
+    ```bash
+    "GGUF Merge.exe" path_to_file
+    ```
+4. Wait for the process to complete.
+
+### Method 3: Simple Program Launch
+
+1. Double-click the program's executable file to launch it.
+2. The program will prompt you to specify the path to the 'gguf-split-' file.
+3. Enter the path to the 'gguf-split-' file and wait for the process to complete.
+
 ## Example Usage
 
 Assuming your executable is named `GGUF Merge.exe` and you have a 'gguf-split-' file named `leviathan-720b.Q5_K_M.gguf-split-a`, you can use the following command in the CMD:
