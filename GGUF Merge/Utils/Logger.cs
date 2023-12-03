@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Files;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Utils
         {
             string logEntry = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss}: {message}";
 
-            LogInDirectory(message, "");
+            LogInDirectory(message, Settings.LogsDirectory);
 
             if (isWriteInConsole)
             {
