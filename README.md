@@ -1,43 +1,101 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Hugging Face](https://img.shields.io/badge/Powered%20by-Hugging%20Face-yellow)](https://huggingface.co/)
+
 # GGUF Merge
-As known, [Hugging Face](https://huggingface.co/) splits large files. This program, on the other hand, merge all split files back into a single, large file.
+
+As known, [Hugging Face](https://huggingface.co/) splits large files. This program, on the other hand, merges all split files back into a single, large file.
 
 ## Description
 
-**GGUF Merge** is a C# project built with Visual Studio specifically designed for merging '.gguf-split-' files into a unified '.gguf' file. This project requires [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+**GGUF Merge** is a C# project built with Visual Studio specifically designed for merging `.gguf-split-` files into a unified `.gguf` file. This project requires [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 ## Usage
 
-### Method 1: Drag and Drop
+### Method 1: Drag and Drop (Windows Only)
 
-1. Open File Explorer and locate any 'gguf-split-' file you want to merge.
-2. Drag the selected 'gguf-split-' file onto the program's executable file and wait for the process to complete.
+1. Open File Explorer and locate any `.gguf-split-` file you want to merge.
+2. Drag the selected `.gguf-split-` file onto the program's executable file and wait for the process to complete.
 
-### Method 2: Command Line Usage (CMD)
+### Method 2: Command Line Usage (CMD or Terminal)
 
+#### Windows:
 1. Open the Command Prompt (CMD).
 2. Navigate to the directory containing the program's executable file.
-3. Run the program with the specified 'gguf-split-' file as a command line argument. For example:
+3. Run the program with the specified `.gguf-split-` file as a command-line argument. For example:
     ```bash
     "GGUF Merge.exe" path_to_file
     ```
 4. Wait for the process to complete.
 
-### Method 3: Simple Program Launch
+#### Linux:
+1. Open a terminal.
+2. Navigate to the directory containing the program’s `.dll` file.
+3. Ensure that .NET 8 is installed (see the Linux guide below).
+4. Run the program using:
+    ```bash
+    dotnet "GGUF Merge.dll" path_to_file
+    ```
+5. Wait for the process to complete.
 
-1. Double-click the program's executable file to launch it.
-2. The program will prompt you to specify the path to the 'gguf-split-' file.
-3. Enter the path to the 'gguf-split-' file and wait for the process to complete.
+### Method 3: Simple Program Launch (Interactive Mode)
+
+1. Double-click the program’s executable file to launch it (Windows) or run it via `dotnet` (Linux).
+2. The program will prompt you to specify the path to the `.gguf-split-` file.
+3. Enter the path to the `.gguf-split-` file and wait for the process to complete.
 
 ## Example Usage
 
-Assuming your executable is named `GGUF Merge.exe` and you have a 'gguf-split-' file named `leviathan-720b.Q5_K_M.gguf-split-a`, you can use the following command in the CMD:
+Assuming your executable is named `GGUF Merge.exe` (Windows) or `GGUF Merge.dll` (Linux), and you have a `.gguf-split-` file named `leviathan-720b.Q5_K_M.gguf-split-a`, you can use the following command:
 
+### Windows:
 ```bash
 "GGUF Merge.exe" leviathan-720b.Q5_K_M.gguf-split-a
 ```
-Executing this command initiates the GGUF Merge application, instructing the program to identify all files sharing both the identical name and the '.gguf-split-' extension. Subsequently, the application merges these identified files, unifying them into a singular '.gguf' file.
 
-In essence, the provided command orchestrates the amalgamation of all 'gguf-split-' files into a cohesive '.gguf' file.
+### Linux:
+```bash
+dotnet "GGUF Merge.dll" leviathan-720b.Q5_K_M.gguf-split-a
+```
+
+Executing this command initiates the GGUF Merge application, instructing the program to identify all files sharing both the identical name and the `.gguf-split-` extension. Subsequently, the application merges these identified files, unifying them into a singular `.gguf` file.
+
+## Running on Linux
+
+### Installing .NET 8 on Linux
+
+Before running the program on Linux, you must install .NET 8. The installation steps depend on your Linux distribution.
+
+#### Ubuntu/Debian:
+```bash
+sudo apt update
+sudo apt install dotnet-sdk-8.0
+```
+
+#### Arch Linux:
+```bash
+sudo pacman -S dotnet-sdk-8.0
+```
+
+#### Fedora:
+```bash
+sudo dnf install dotnet-sdk-8.0
+```
+
+After installation, verify the installation:
+```bash
+dotnet --version
+```
+It should output a version `8.x.x`.
+
+### Running the Program
+Once .NET 8 is installed, navigate to the directory where `GGUF Merge.dll` is located and run:
+```bash
+dotnet "GGUF Merge.dll" path_to_file
+```
+This will merge all `.gguf-split-` files back into a single `.gguf` file.
+
+## Notes
+- Windows users can use the `.exe` directly.
+- Linux users must run the `.dll` with `dotnet`.
+- Ensure all `.gguf-split-` parts are in the same directory before running the program.
 
 *This README.md was generated by AI.*
